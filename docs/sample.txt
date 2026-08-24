@@ -1,0 +1,15 @@
+本地 RAG 快速说明（TXT 示例）
+
+项目名称：简易本地知识库问答
+作者用途：演示 LangChain + ChromaDB + Gemini 的基本用法
+
+常见问题：
+1）API Key 放在哪里？
+答：放在项目根目录的 .env 文件中，变量名为 GEMINI_API_KEY。
+程序通过 os.getenv("GEMINI_API_KEY") 读取，不会把密钥写死在代码里。
+
+2）向量库存在哪里？
+答：默认保存在项目根目录的 chroma_db 文件夹中，下次可用 --load-only 直接加载。
+
+3）如何更新知识库？
+答：向 docs 目录添加或修改文档后，重新运行 python main.py（不要加 --load-only）。
